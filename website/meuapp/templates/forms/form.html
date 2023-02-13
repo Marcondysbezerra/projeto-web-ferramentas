@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IP ADDRESS FORM</title>
+</head>
+<body>
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.ip_address }}
+        {{ form.port }}
+        <input type="submit" value="Testar">
+    </form>
+    {% if result == 0 %}
+    <p>Porta aberta!</p>
+    {% else %}
+    <p>Porta fechada!</p>
+    {% endif %}
+
+{% endblock %}
+</body>
+</html>

@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class MeuappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'meuapp'
+    name = 'website.meuapp'
